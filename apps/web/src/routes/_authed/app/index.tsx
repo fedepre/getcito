@@ -59,7 +59,7 @@ export const Route = createFileRoute("/_authed/app/")({
 		const result = await getOrganizations();
 
 		// Single-org mode: redirect to the user's one org (created on signup).
-		if (!result.supportsMultiOrg && result.organizations.length > 0) {
+		if (!result.supportsMultiOrg && result.organizations.length === 1) {
 			throw redirect({ to: "/app/$brand", params: { brand: result.organizations[0].id } });
 		}
 

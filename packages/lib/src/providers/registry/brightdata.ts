@@ -158,7 +158,7 @@ export const brightdata: Provider = {
 					language: options?.targetLanguage ? (getLanguageCode(options.targetLanguage) ?? "en") : "en",
 					country: options?.targetMarket ? (getCountryCode(options.targetMarket) ?? "US") : "US",
 					start_page: 1,
-					end_page: 10,
+					end_page: 1,
 					collapse_aio: false
 				};
 			}
